@@ -10,6 +10,9 @@ This is a robust PDF chatbot application that allows users to upload PDF files a
 - **Error Handling and Logging**: Comprehensive error handling and logging mechanisms are in place to ensure smooth operation and easy debugging.
 - **Unit Tests**: Includes unit tests to ensure the reliability and correctness of the application.
 
+![image](https://github.com/user-attachments/assets/d6317c8d-61e6-4c81-95de-5f604b733309)
+
+
 ## Installation
 
 1. Clone the repository:
@@ -23,11 +26,14 @@ This is a robust PDF chatbot application that allows users to upload PDF files a
     pip install -r requirements.txt
     ```
 
-3. Set the environment variables:
-    - `TOGETHER_API_KEY`: Your Together API key.
-    - `UPLOAD_FOLDER`: Directory to save uploaded PDF files.
-    - `MAX_UPLOAD_SIZE`: Maximum allowed upload size for PDFs.
-    - `ALLOWED_EXTENSIONS`: Allowed file extensions for uploads (e.g., `['pdf']`).
+3. Configuration
+The application configuration is managed through the Config class in app/config.py, which defines several key settings:
+
+- TOGETHER_API_KEY: API key for accessing the Together service, necessary for generating responses.
+- UPLOAD_FOLDER: Directory path for storing uploaded files, ensuring that files are organized and accessible.
+- MAX_UPLOAD_SIZE: Maximum allowed size for uploaded files (10 MB), preventing excessively large uploads that could impact performance.
+- ALLOWED_EXTENSIONS: Set of allowed file extensions for uploads (currently only 'pdf'), ensuring that only valid file types are processed.
+- RATE_LIMIT: Rate limit for API requests (5 requests per minute), helping to manage server load and prevent abuse.
 
 ## Usage
 
