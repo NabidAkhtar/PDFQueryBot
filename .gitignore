@@ -1,0 +1,8 @@
+*.pyc
+__pycache__/
+venv/
+env/
+ridiv/
+logs/
+tests/
+.env
